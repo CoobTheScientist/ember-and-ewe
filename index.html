@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember &amp; Ewe — Hand-knit blankets in the colors you choose</title>
+<meta name="description" content="Custom hand-knit blankets. Pick your size and up to three colors, and we knit it just for you. Made to order, made to last.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8553D'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EEE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- =============================================================== HEADER -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">EE</span>
+      <span class="brand__name">Ember &amp; Ewe
+        <span class="brand__tag">Hand-knit to order</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#builder" class="btn btn--primary">Design yours</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================== HERO -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">Made to order · One at a time</p>
+        <h1>Blankets knit in <em>your</em> colors.</h1>
+        <p class="lede">
+          Every Ember &amp; Ewe blanket starts as bare yarn and a color choice.
+          Pick a size, pick up to three colors, and I knit it by hand — no two
+          alike, no factory in between.
+        </p>
+        <div class="hero__cta">
+          <a href="#builder" class="btn btn--primary">Design your blanket</a>
+          <a href="#gallery" class="btn btn--ghost">See past work</a>
+        </div>
+        <p class="hero__note">
+          <span><i class="dot" style="background:#7A9E7E"></i> 3–4 week turnaround</span>
+          <span><i class="dot" style="background:#E0A03C"></i> 8 yarn colors</span>
+          <span><i class="dot" style="background:#C8553D"></i> Ships anywhere in the US</span>
+        </p>
+      </div>
+      <div class="preview-card">
+        <div class="blanket" data-colors="#3A6EA5,#F4F1EA,#7A5230" aria-hidden="true"></div>
+        <p class="preview-caption">
+          <span><strong>Harbor Throw</strong> — Blue, White, Brown</span>
+          <span>Made May 2026</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= STEPS -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps, then the needles come out.</h2>
+      <div class="steps" style="margin-top:36px">
+        <div class="step">
+          <div class="step__num" aria-hidden="true">1</div>
+          <h3>Choose a size</h3>
+          <p>Throw, Twin, or Queen. Sizes and prices are listed right on the designer below.</p>
+        </div>
+        <div class="step">
+          <div class="step__num" aria-hidden="true">2</div>
+          <h3>Choose your colors</h3>
+          <p>Any one, two, or three of the eight yarn colors. The preview updates as you pick.</p>
+        </div>
+        <div class="step">
+          <div class="step__num" aria-hidden="true">3</div>
+          <h3>I knit it and ship it</h3>
+          <p>You get a confirmation and an invoice, progress photos partway through, and the blanket in 3–4 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== BUILDER -->
+  <section class="section builder" id="builder">
+    <div class="wrap">
+      <p class="eyebrow">Design yours</p>
+      <h2>Build your blanket.</h2>
+      <p class="lede" style="margin-bottom:40px">
+        Pick a size and up to three colors. The preview on the left is a rough
+        idea of the stripe pattern — I'll confirm the exact layout with you
+        before casting on.
+      </p>
+
+      <div class="builder__grid">
+
+        <!-- Live preview -->
+        <div class="builder__preview">
+          <div class="preview-card">
+            <div class="blanket" id="previewBlanket">
+              <p class="blanket__empty">Your blanket appears here<br>once you pick a color.</p>
+            </div>
+            <p class="preview-caption">
+              <span id="previewCaption">Throw · awaiting colors</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div>
+          <div class="field">
+            <div class="field__label"><h3>1 · Size</h3></div>
+            <div class="sizes" id="sizes"><!-- built by app.js --></div>
+          </div>
+
+          <div class="field">
+            <div class="field__label">
+              <h3>2 · Colors</h3>
+              <span class="field__hint" id="colorHint">0 of 3 chosen</span>
+            </div>
+            <div class="swatches" id="swatches"><!-- built by app.js --></div>
+            <div class="chosen" id="chosen"></div>
+            <p class="visually-hidden" id="builderLive" role="status" aria-live="polite"
+               style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+          </div>
+
+          <div class="field">
+            <div class="field__label"><h3>3 · Your details</h3></div>
+
+            <div class="summary">
+              <div class="summary__row">
+                <span>Size</span><span id="sumSize">—</span>
+              </div>
+              <div class="summary__row">
+                <span>Base price</span><span id="sumBase">—</span>
+              </div>
+              <div class="summary__row">
+                <span>Colors</span><span id="sumColors">—</span>
+              </div>
+              <div class="summary__row">
+                <span>Additional colors</span><span id="sumExtras">included</span>
+              </div>
+              <div class="summary__row summary__row--total">
+                <span>Total</span><span id="sumTotal">—</span>
+              </div>
+
+              <form id="orderForm">
+                <input type="hidden" name="order_size"   id="fSize">
+                <input type="hidden" name="order_colors" id="fColors">
+                <input type="hidden" name="order_price"  id="fPrice">
+
+                <div class="order-fields">
+                  <div>
+                    <label class="lbl" for="oName">Your name</label>
+                    <input type="text" id="oName" name="name" required autocomplete="name">
+                  </div>
+                  <div>
+                    <label class="lbl" for="oEmail">Email</label>
+                    <input type="email" id="oEmail" name="email" required autocomplete="email">
+                  </div>
+                  <div class="full">
+                    <label class="lbl" for="oNotes">Anything I should know? <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+                    <textarea id="oNotes" name="notes" placeholder="Stripe width, which color should dominate, a deadline, a gift note…"></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--block" id="orderSubmit" disabled>
+                  Pick at least one color
+                </button>
+                <a class="btn btn--ghost btn--block" id="payNow" hidden
+                   style="margin-top:12px" target="_blank" rel="noopener">
+                  Or pay now by card
+                </a>
+                <p class="form-status" id="orderStatus" role="status" aria-live="polite"></p>
+                <p class="fineprint">
+                  Sending this doesn't charge you anything. I'll confirm the details,
+                  then send a secure payment link. Nothing gets knit until you say go.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== GALLERY -->
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Past work</p>
+      <h2>A few color combinations people have chosen.</h2>
+      <p class="lede" style="margin-bottom:36px">
+        Swap these for photos of your real blankets — see the note in
+        <code>index.html</code> for exactly where.
+      </p>
+
+      <!-- TO REPLACE WITH PHOTOS: swap each <div class="blanket"> for
+           <img src="assets/photo-name.jpg" alt="description" class="blanket">
+           and delete the data-colors attribute. -->
+      <div class="gallery">
+        <figure>
+          <div class="blanket" data-colors="#4F7942,#E8B93B" aria-hidden="true"></div>
+          <figcaption><strong>Meadow</strong> Green + Yellow · Twin</figcaption>
+        </figure>
+        <figure>
+          <div class="blanket" data-colors="#6B4C8A,#F4F1EA,#26262B" aria-hidden="true"></div>
+          <figcaption><strong>Dusk</strong> Purple + White + Black · Throw</figcaption>
+        </figure>
+        <figure>
+          <div class="blanket" data-colors="#A8323B,#7A5230,#E8B93B" aria-hidden="true"></div>
+          <figcaption><strong>Hearth</strong> Red + Brown + Yellow · Queen</figcaption>
+        </figure>
+        <figure>
+          <div class="blanket" data-colors="#3A6EA5,#4F7942" aria-hidden="true"></div>
+          <figcaption><strong>Lakeside</strong> Blue + Green · Throw</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== BAND -->
+  <section class="section band">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold)">The details</p>
+      <h2>Made to be used, not saved for guests.</h2>
+      <div class="band__grid" style="margin-top:36px">
+        <div>
+          <h3>The yarn</h3>
+          <p>Soft, durable, and machine washable. <em>Add your actual yarn brand and fiber content here.</em></p>
+        </div>
+        <div>
+          <h3>Care</h3>
+          <p>Machine wash cold on gentle, tumble dry low or lay flat. No special handling, no dry cleaning.</p>
+        </div>
+        <div>
+          <h3>Timeline</h3>
+          <p>3–4 weeks from the day the order is confirmed. Larger sizes and holiday season may run longer — I'll always tell you up front.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== CTA -->
+  <section class="section section--tight">
+    <div class="wrap" style="text-align:center">
+      <h2>Not sure which colors to pick?</h2>
+      <p class="lede" style="margin:0 auto 24px">
+        Tell me the room, the person, or just a vibe — I'll suggest a combination.
+      </p>
+      <a href="contact.html" class="btn btn--primary">Ask a question</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- =============================================================== FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <strong style="font-family:var(--font-display);color:var(--pine);font-size:1.1rem">Ember &amp; Ewe</strong>
+        <p style="margin:6px 0 0">Hand-knit blankets, made one at a time.<br>
+          <a href="#" data-email-link></a></p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="#builder">Design yours</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="site-footer__legal">© <span data-year></span> Ember &amp; Ewe. Named for E.E.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

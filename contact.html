@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Ember &amp; Ewe</title>
+<meta name="description" content="Questions about sizes, colors, timelines, or a custom request? Send a message to Ember & Ewe.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8553D'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EEE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">EE</span>
+      <span class="brand__name">Ember &amp; Ewe
+        <span class="brand__tag">Hand-knit to order</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="is-active">Contact</a>
+      <a href="index.html#builder" class="btn btn--primary">Design yours</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:64px 0 52px">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Ask me anything.</h1>
+      <p class="lede">
+        Color advice, a size that isn't listed, a rush deadline, a question
+        about an order in progress — all fair game. I answer within two
+        business days.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact__grid">
+
+      <div class="card">
+        <h2 style="margin-top:0">Send a message</h2>
+        <form id="contactForm">
+          <div class="order-fields" style="margin-top:20px">
+            <div>
+              <label class="lbl" for="cName">Your name</label>
+              <input type="text" id="cName" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label class="lbl" for="cEmail">Email</label>
+              <input type="email" id="cEmail" name="email" required autocomplete="email">
+            </div>
+            <div class="full">
+              <label class="lbl" for="cTopic">What's this about?</label>
+              <select id="cTopic" name="topic">
+                <option>General question</option>
+                <option>Help choosing colors</option>
+                <option>A size that isn't listed</option>
+                <option>An order I already placed</option>
+                <option>Wholesale or bulk</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="full">
+              <label class="lbl" for="cNotes">Your message</label>
+              <textarea id="cNotes" name="notes" required
+                placeholder="Tell me what you're after…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Send message</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+          <p class="fineprint">
+            Prefer regular email? Write to
+            <a href="#" data-email-link></a> directly.
+          </p>
+        </form>
+      </div>
+
+      <div>
+        <div class="card">
+          <h2 style="margin-top:0">Common questions</h2>
+          <dl class="faq">
+            <dt>Can I pick more than three colors?</dt>
+            <dd>The standard blankets top out at three — it keeps the pattern clean and the price predictable. Ask me if you have something bigger in mind.</dd>
+
+            <dt>How long does it take?</dt>
+            <dd>3–4 weeks from confirmed order to shipped, longer for a Queen or during the holidays. I'll give you a real date before you pay.</dd>
+
+            <dt>How do I pay?</dt>
+            <dd>Send an order request from the designer, I confirm the details, then you get a secure payment link. No charge until we've both agreed on the blanket.</dd>
+
+            <dt>Can I return it?</dt>
+            <dd>Each blanket is made specifically for you, so returns are limited — but if something arrives damaged or isn't what we agreed on, I'll make it right. <em>Edit this to match the policy you actually want.</em></dd>
+
+            <dt>Do you ship internationally?</dt>
+            <dd><em>Answer this one based on what you're willing to do.</em></dd>
+          </dl>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Other ways to reach me</h3>
+          <p style="margin:0;color:var(--ink-soft);font-size:.95rem">
+            <strong>Email</strong> — <a href="#" data-email-link></a><br>
+            <strong>Instagram</strong> — <em>add your handle, or delete this line</em><br>
+            <strong>Based in</strong> — <em>your city</em>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <strong style="font-family:var(--font-display);color:var(--pine);font-size:1.1rem">Ember &amp; Ewe</strong>
+        <p style="margin:6px 0 0">Hand-knit blankets, made one at a time.<br>
+          <a href="#" data-email-link></a></p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="index.html#builder">Design yours</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="site-footer__legal">© <span data-year></span> Ember &amp; Ewe. Named for E.E.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
