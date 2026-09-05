@@ -1,4 +1,4 @@
-# Ember & Ewe
+# E&E Knits
 
 A static website for a custom hand-knit blanket business. No build step, no
 framework, no server — three HTML files, one CSS file, one JS file. That's
@@ -43,7 +43,7 @@ Everything configurable lives in the `CONFIG` block at the top of
 | **Prices and sizes** | `CONFIG.sizes` — the page recalculates automatically |
 | **Fee per extra color** | `CONFIG.extraColorFee` (currently $20) |
 | **Yarn colors / hex values** | `CONFIG.yarns` |
-| **Business name** | Search all three `.html` files for `Ember &amp; Ewe` and replace |
+| **Business name** | Search all three `.html` files for `E&amp;E Knits` and replace |
 | **About Me text** | `about.html` — all placeholder, marked with tan boxes |
 | **FAQ answers** | `contact.html` — two answers are marked *edit this* |
 | **Gallery photos** | `index.html`, in the `#gallery` section — instructions in a comment there |
@@ -112,7 +112,7 @@ The live site refreshes in under a minute.
 
 ### A custom domain (~$12/year, optional but worth it)
 
-`emberandewe.com` reads better than a github.io URL. Buy one at Namecheap,
+`eeknits.com` reads better than a github.io URL. Buy one at Namecheap,
 Porkbun, or Cloudflare, then follow
 [GitHub's custom domain guide](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
 Hosting stays free; you're only paying for the name.
