@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ember & Ewe — site behavior
+   E&E Knits — site behavior
    Plain JS, no build step, no dependencies. Works on any static host.
    ==========================================================================
 
